@@ -1,0 +1,76 @@
+.home-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.home-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("../../public/assets/images/website\ background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  z-index: -1;
+}
+
+/* Desktop background already handled */
+.home-page.desktop {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* App icons */
+.desktop-icon {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.desktop-icon img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+
+}
+
+.desktop-icon span {
+  margin-top: 6px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.desktop-icon:hover {
+  transform: scale(1.08);
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .home-page::before {
+    background-position: center top;
+  }
+
+  .home-page.desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 32px;
+  }
+
+  .desktop-icon {
+    position: relative;
+    inset: auto;
+  }
+}

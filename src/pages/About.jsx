@@ -1,3 +1,11 @@
+import BackButton from "./shared/BackButton";
+import "../styles/About.css";
+
+
 export default function About() {
-  return <h1>About</h1>;
+  return (
+    <div className="about-page">
+      <BackButton />
+    </div>
+  );
 }

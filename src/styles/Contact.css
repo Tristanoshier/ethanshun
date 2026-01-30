@@ -1,0 +1,25 @@
+.contact-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.contact-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("../../public/assets/images/website\ background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .contact-page::before {
+    background-position: center top;
+  }
+}
