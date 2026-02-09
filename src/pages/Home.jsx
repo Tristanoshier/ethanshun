@@ -1,47 +1,55 @@
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
 
+const topImages = [
+  "/assets/images/ethanlogo1.gif",
+  "/assets/images/ethanlogo2.gif",
+  "/assets/images/ethanlogo3.gif",
+  "/assets/images/ethanlogo4.gif",
+];
+
 const apps = [
   {
     name: "About",
     path: "/about",
-    image: "/icons/about.jpg",
+    image: "/assets/images/beaker.jpg",
     x: "10%",
     y: "20%",
   },
   {
     name: "Portfolio",
     path: "/portfolio",
-    image: "/icons/portfolio.jpg",
-    x: "35%",
-    y: "40%",
+    image: "/assets/images/castle.png",
+    x: "40%",
+    y: "30%",
   },
   {
     name: "Music",
     path: "/music",
     image: "/assets/images/boombox gif.gif",
-    x: "60%",
-    y: "25%",
-  },
-  {
-    name: "Bakery",
-    path: "/bakery",
-    image: "/icons/bakery.jpg",
     x: "20%",
-    y: "65%",
+    y: "70%",
   },
   {
     name: "Contact",
     path: "/contact",
-    image: "/icons/contact.jpg",
-    x: "70%",
-    y: "60%",
+    image: "/assets/images/bird.png",
+    x: "80%",
+    y: "65%",
   },
 ];
 
 export default function Home() {
   return (
     <div className="home-page desktop">
+      <div className="scrolling-top-row">
+        <div className="scrolling-track">
+          {topImages.concat(topImages).map((src, i) => (
+            <img key={i} src={src} alt="" className="scrolling-image" />
+          ))}
+        </div>
+      </div>
+
       {apps.map((app) => (
         <Link
           key={app.name}

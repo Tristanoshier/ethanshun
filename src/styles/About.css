@@ -1,25 +1,99 @@
 .about-page {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-}
-
-.about-page::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
   background-image: url("../../public/assets/images/website\ background.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  z-index: -1;
+  font-family: "Courier New", monospace;
+  color: #000080;
+  padding: 20px;
+  min-height: 100vh;
 }
 
+/* Header box */
+.retro-header {
+  background: linear-gradient(to right, #000080, #0000ff);
+  padding: 16px;
+  border: 3px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  text-align: center;
+  box-shadow: 3px 3px #404040;
+  margin-bottom: 32px;
+}
+
+.retro-header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #fff;
+  text-shadow: 1px 1px #808080;
+}
+
+/* Big outer box for bio content */
+.about-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  border: 4px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  background-color: #e0e0e0;
+  box-shadow: 4px 4px #404040;
+  padding: 16px;
+}
+
+/* Photo box */
+.bio-photo {
+  border: 3px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  background-color: #c0c0c0;
+  padding: 4px;
+  box-shadow: 2px 2px #404040;
+}
+
+.bio-photo img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Text box */
+.bio-text {
+  max-width: 500px;
+  border: 3px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  background-color: #f0f0f0;
+  padding: 12px;
+  box-shadow: 2px 2px #404040;
+}
+
+.bio-text p {
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* Retro links */
+.bio-text a {
+  color: #ff0000;
+  text-decoration: underline;
+}
+
+.bio-text a:hover {
+  color: #00ff00;
+}
+
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .about-page::before {
-    background-position: center top;
+  .about-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bio-photo img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .bio-text {
+    max-width: 90%;
   }
 }

@@ -3,6 +3,8 @@
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
+  /* background-image: url("../../public/assets/images/website\ background.png"); */
+  /* z-index: -2; */
 }
 
 .home-page::before {
@@ -10,7 +12,7 @@
   position: absolute;
   inset: 0;
 
-  background-image: url("../../public/assets/images/website\ background.png");
+  background-image: url("../../public/assets/images/hills.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -23,6 +25,43 @@
   position: relative;
   min-height: 100vh;
   width: 100%;
+}
+
+/* Top image strip */
+.top-image-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+
+  padding: 16px;
+  width: 100%;
+}
+
+/* Individual images */
+.top-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.scrolling-top-row {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background: transparent;
+  position: relative;
+  padding: 16px 0;
+}
+
+.scrolling-track {
+  display: flex;
+  animation: scrollLeft 20s linear infinite;
+}
+
+.scrolling-image {
+  height: 60px;
+  margin-right: 32px;
+  object-fit: contain;
 }
 
 /* App icons */
@@ -41,10 +80,9 @@
 }
 
 .desktop-icon img {
-  width: 72px;
-  height: 72px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
-
 }
 
 .desktop-icon span {
@@ -72,5 +110,32 @@
   .desktop-icon {
     position: relative;
     inset: auto;
+  }
+
+  .scrolling-track {
+    animation: scrollLeft 5s linear infinite; /* faster on mobile */
+  }
+
+  .scrolling-image {
+    height: 60px;
+    margin-right: 16px;
+  }
+}
+
+/* Animation keyframes */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .scrolling-image {
+    height: 60px;
+    margin-right: 16px;
   }
 }

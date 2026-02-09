@@ -3,7 +3,7 @@ import "../../styles/BackButton.css";
 
 export default function BackButton() {
   return (
-    <Link to="/" className="back-button">
+    <Link to="/" className="retro-back-button">
       ← Back to Home
     </Link>
   );
