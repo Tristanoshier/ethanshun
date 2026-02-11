@@ -1,25 +1,109 @@
-.music-page {
+/* Fullscreen page */
+.coverflow-page {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #1a1a1a, #000);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  perspective: 1200px;
+}
+
+/* Album container */
+.coverflow {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.music-page::before {
-  content: "";
+/* Individual album */
+.cover {
   position: absolute;
-  inset: 0;
+  left: 50%;
+  top: 50%;
 
-  background-image: url("../../public/assets/images/website\ background.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  transform-style: preserve-3d;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+  cursor: pointer;
 
-  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+/* Album artwork */
+.cover img {
+  width: 25vw;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
 }
 
+/* Album title */
+.album-title {
+  margin-top: 12px;
+  text-align: center;
+  color: white;
+  font-family: "Courier New", monospace;
+  font-size: 18px;
+}
+
+/* Controls */
+.controls {
+  position: absolute;
+  bottom: 40px;
+}
+
+.controls button {
+  background: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  padding: 10px 20px;
+  margin: 0 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.back-button-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+}
+
+/* 📱 Mobile Adjustments */
 @media (max-width: 768px) {
-  .music-page::before {
-    background-position: center top;
+  .cover img {
+    width: 55vw;
+    max-width: none;
+  }
+
+  .album-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cover img {
+    width: 70vw;
+  }
+
+  .controls {
+    bottom: 20px;
+  }
+
+  .back-button-wrapper {
+    top: 12px;
+    left: 12px;
+    transform: scale(0.9);
   }
 }

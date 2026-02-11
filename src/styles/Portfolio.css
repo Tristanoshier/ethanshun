@@ -1,25 +1,105 @@
 .portfolio-page {
-  position: relative;
-  width: 100%;
+  background-color: #c0c0c0;
+  font-family: "Courier New", monospace;
+  padding: 20px;
   min-height: 100vh;
-  overflow: hidden;
 }
 
-.portfolio-page::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background-image: url("../../public/assets/images/website\ background.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  z-index: -1;
+/* Header */
+.retro-header {
+  background: linear-gradient(to right, #000080, #0000ff);
+  padding: 16px;
+  border: 3px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  text-align: center;
+  box-shadow: 3px 3px #404040;
+  margin-bottom: 24px;
 }
 
+.retro-header h1 {
+  margin: 0;
+  color: white;
+}
+
+/* Main layout */
+.portfolio-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Left column (clients) */
+.client-list {
+  width: 30%;
+  background: #e0e0e0;
+  padding: 12px;
+  border: 3px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  box-shadow: 3px 3px #404040;
+}
+
+.client-list h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.client-item {
+  background: #f0f0f0;
+  margin-bottom: 10px;
+  padding: 8px;
+  cursor: pointer;
+
+  border: 2px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+}
+
+.client-item:hover {
+  background: #d0d0ff;
+}
+
+.client-item.active {
+  background: #000080;
+  color: white;
+}
+
+/* Right column (details) */
+.client-details {
+  width: 70%;
+  background: #e0e0e0;
+  padding: 16px;
+
+  border: 3px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  box-shadow: 3px 3px #404040;
+}
+
+.client-details img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin-bottom: 16px;
+
+  border: 3px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+}
+
+/* Back button spacing */
+.portfolio-page button {
+  margin-top: 20px;
+}
+
+/* 📱 Mobile Layout */
 @media (max-width: 768px) {
-  .portfolio-page::before {
-    background-position: center top;
+  .portfolio-container {
+    flex-direction: column;
+  }
+
+  .client-list,
+  .client-details {
+    width: 100%;
   }
 }

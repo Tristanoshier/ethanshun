@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
 
@@ -13,33 +14,52 @@ const apps = [
     name: "About",
     path: "/about",
     image: "/assets/images/beaker.jpg",
-    x: "10%",
-    y: "20%",
+    desktopX: "10%",
+    desktopY: "20%",
+    mobileX: "10%",
+    mobileY: "65%",
   },
   {
     name: "Portfolio",
     path: "/portfolio",
     image: "/assets/images/castle.png",
-    x: "40%",
-    y: "30%",
+    desktopX: "40%",
+    desktopY: "30%",
+    mobileX: "60%",
+    mobileY: "0%",
   },
   {
     name: "Music",
     path: "/music",
     image: "/assets/images/boombox gif.gif",
-    x: "20%",
-    y: "70%",
+    desktopX: "20%",
+    desktopY: "70%",
+    mobileX: "20%",
+    mobileY: "75%",
   },
   {
     name: "Contact",
     path: "/contact",
     image: "/assets/images/bird.png",
-    x: "80%",
-    y: "65%",
+    desktopX: "80%",
+    desktopY: "65%",
+    mobileX: "0%",
+    mobileY: "45%",
   },
 ];
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="home-page desktop">
       <div className="scrolling-top-row">
@@ -55,7 +75,10 @@ export default function Home() {
           key={app.name}
           to={app.path}
           className="desktop-icon"
-          style={{ top: app.y, left: app.x }}
+          style={{
+            top: isMobile ? app.mobileY : app.desktopY,
+            left: isMobile ? app.mobileX : app.desktopX,
+          }}
         >
           <img src={app.image} alt={app.name} />
           <span>{app.name}</span>

@@ -2,9 +2,6 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
-  /* background-image: url("../../public/assets/images/website\ background.png"); */
-  /* z-index: -2; */
 }
 
 .home-page::before {
@@ -55,6 +52,7 @@
 
 .scrolling-track {
   display: flex;
+  width: max-content;
   animation: scrollLeft 20s linear infinite;
 }
 
@@ -93,7 +91,6 @@
 .desktop-icon:hover {
   transform: scale(1.08);
 }
-
 /* Mobile tweaks */
 @media (max-width: 768px) {
   .home-page::before {
@@ -110,10 +107,12 @@
   .desktop-icon {
     position: relative;
     inset: auto;
+    width: 125px;
+    height: 125px;
   }
 
-  .scrolling-track {
-    animation: scrollLeft 5s linear infinite; /* faster on mobile */
+  .scrolling-top-row {
+    grid-column: 1 / 0; /* span full grid width */
   }
 
   .scrolling-image {
@@ -122,13 +121,12 @@
   }
 }
 
-/* Animation keyframes */
 @keyframes scrollLeft {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(-50%);
+  to {
+    transform: translateX(-100%);
   }
 }
 
