@@ -2,7 +2,7 @@
 .coverflow-page {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(to bottom, #1a1a1a, #000);
+  background-image: url("../../public/assets/images/paperbackground\ 2.jpg");
   overflow: hidden;
 
   display: flex;
@@ -11,6 +11,8 @@
   align-items: center;
 
   perspective: 1200px;
+  font-family: "Courier New", monospace;
+  color: #3b342c;
 }
 
 /* Album container */
@@ -37,23 +39,29 @@
 
   transform: translate(-50%, -50%);
 }
+
 /* Album artwork */
 .cover img {
   width: 25vw;
   max-width: 300px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+
+  border: 3px solid #efe9df;
+  border-right-color: #6e665c;
+  border-bottom-color: #6e665c;
+
+  box-shadow: 0 20px 40px rgba(110, 102, 92, 0.6); /* warm brown depth */
+  background-color: #e7e0d5;
 }
 
 /* Album title */
 .album-title {
   margin-top: 12px;
   text-align: center;
-  color: white;
-  font-family: "Courier New", monospace;
+  color: #3b342c;
   font-size: 18px;
+  text-shadow: 1px 1px #f3ede4;
 }
 
 /* Controls */
@@ -63,14 +71,37 @@
 }
 
 .controls button {
-  background: #c0c0c0;
-  border: 2px solid #fff;
-  border-right-color: #404040;
-  border-bottom-color: #404040;
+  background: linear-gradient(
+    to bottom,
+    #e7e0d5 0%,
+    #cfc6b8 100%
+  ); /* beige plastic */
+
+  border: 2px solid #efe9df;
+  border-right-color: #6e665c;
+  border-bottom-color: #6e665c;
+
   padding: 10px 20px;
   margin: 0 15px;
   font-weight: bold;
   cursor: pointer;
+  color: #3b342c;
+
+  box-shadow: 2px 2px #6e665c;
+  text-shadow: 1px 1px #f3ede4;
+  transition: all 0.08s ease-in-out;
+}
+
+.controls button:hover {
+  background: linear-gradient(to bottom, #dcd4c7 0%, #bfb6a8 100%);
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px #6e665c;
+}
+
+.controls button:active {
+  background: linear-gradient(to bottom, #cfc6b8 0%, #e7e0d5 100%);
+  box-shadow: inset 1px 1px #6e665c;
+  transform: translate(2px, 2px);
 }
 
 .back-button-wrapper {

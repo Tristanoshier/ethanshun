@@ -1,33 +1,37 @@
 .retro-back-button {
-  font-family: "Courier New", monospace; /* pixel-y font */
+  font-family: "Courier New", monospace;
   font-weight: bold;
   font-size: 14px;
 
-  color: #000080; /* navy text */
+  color: #3b342c; /* warm brown text */
   background: linear-gradient(
     to bottom,
-    #c0c0c0 0%,
-    #808080 100%
-  ); /* silver gradient */
-  border: 2px solid #fff; /* white border to mimic 3D bevel */
-  border-right-color: #404040;
-  border-bottom-color: #404040;
+    #e7e0d5 0%,
+    #cfc6b8 100%
+  ); /* beige plastic gradient */
+
+  border: 2px solid #efe9df; /* cream highlight edge */
+  border-right-color: #6e665c; /* brown shadow */
+  border-bottom-color: #6e665c;
+
   padding: 8px 16px;
   cursor: pointer;
 
-  box-shadow: 2px 2px #404040; /* drop shadow effect */
-  text-shadow: 1px 1px #fff; /* classic embossed text */
-  transition: all 0.1s ease-in-out;
+  box-shadow: 2px 2px #6e665c; /* warm shadow */
+  text-shadow: 1px 1px #f3ede4; /* soft cream embossed effect */
+  transition: all 0.08s ease-in-out;
 }
 
-/* Hover / pressed effect */
+/* Hover / raised effect */
 .retro-back-button:hover {
-  background: linear-gradient(to bottom, #808080 0%, #c0c0c0 100%);
-  box-shadow: 1px 1px #404040;
+  background: linear-gradient(to bottom, #dcd4c7 0%, #bfb6a8 100%);
+  box-shadow: 1px 1px #6e665c;
   transform: translate(1px, 1px);
 }
 
+/* Pressed / inset effect */
 .retro-back-button:active {
-  box-shadow: inset 1px 1px #404040;
+  background: linear-gradient(to bottom, #cfc6b8 0%, #e7e0d5 100%);
+  box-shadow: inset 1px 1px #6e665c;
   transform: translate(2px, 2px);
 }

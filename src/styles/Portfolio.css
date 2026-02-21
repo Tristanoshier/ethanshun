@@ -1,25 +1,31 @@
 .portfolio-page {
-  background-color: #c0c0c0;
+  background-image: url("../../public/assets/images/gridpaper.jpg");
   font-family: "Courier New", monospace;
   padding: 20px;
   min-height: 100vh;
+  color: #3b342c; /* warm brown text */
 }
 
 /* Header */
 .retro-header {
-  background: linear-gradient(to right, #000080, #0000ff);
+  background: linear-gradient(
+    to right,
+    #b7ae9f,
+    #a59c8c
+  ); /* soft beige gradient */
   padding: 16px;
-  border: 3px solid #fff;
-  border-right-color: #404040;
-  border-bottom-color: #404040;
+  border: 3px solid #efe9df; /* cream highlight */
+  border-right-color: #6e665c; /* brown shadow */
+  border-bottom-color: #6e665c;
   text-align: center;
-  box-shadow: 3px 3px #404040;
+  box-shadow: 3px 3px #6e665c;
   margin-bottom: 24px;
 }
 
 .retro-header h1 {
   margin: 0;
-  color: white;
+  color: #3b342c;
+  text-shadow: 1px 1px #d8d2c8;
 }
 
 /* Main layout */
@@ -31,49 +37,53 @@
 /* Left column (clients) */
 .client-list {
   width: 30%;
-  background: #e0e0e0;
+  background: #d6cec2; /* window beige */
   padding: 12px;
-  border: 3px solid #fff;
-  border-right-color: #404040;
-  border-bottom-color: #404040;
-  box-shadow: 3px 3px #404040;
+  border: 3px solid #efe9df;
+  border-right-color: #6e665c;
+  border-bottom-color: #6e665c;
+  box-shadow: 3px 3px #6e665c;
 }
 
 .client-list h2 {
   margin-top: 0;
   text-align: center;
+  color: #5a4e3f;
 }
 
+/* Individual client items */
 .client-item {
-  background: #f0f0f0;
+  background: #e7e0d5; /* lighter cream panel */
   margin-bottom: 10px;
   padding: 8px;
   cursor: pointer;
 
-  border: 2px solid #fff;
-  border-right-color: #404040;
-  border-bottom-color: #404040;
+  border: 2px solid #efe9df;
+  border-right-color: #6e665c;
+  border-bottom-color: #6e665c;
+  box-shadow: 1px 1px #6e665c;
 }
 
 .client-item:hover {
-  background: #d0d0ff;
+  background: #dcd4c7; /* subtle warm hover */
 }
 
+/* Active selection */
 .client-item.active {
-  background: #000080;
-  color: white;
+  background: #5a4e3f; /* deep muted brown instead of navy */
+  color: #f3ede4; /* soft cream text */
 }
 
 /* Right column (details) */
 .client-details {
   width: 70%;
-  background: #e0e0e0;
+  background: #d6cec2;
   padding: 16px;
 
-  border: 3px solid #fff;
-  border-right-color: #404040;
-  border-bottom-color: #404040;
-  box-shadow: 3px 3px #404040;
+  border: 3px solid #efe9df;
+  border-right-color: #6e665c;
+  border-bottom-color: #6e665c;
+  box-shadow: 3px 3px #6e665c;
 }
 
 .client-details img {
@@ -82,14 +92,28 @@
   display: block;
   margin-bottom: 16px;
 
-  border: 3px solid #fff;
-  border-right-color: #404040;
-  border-bottom-color: #404040;
+  border: 3px solid #efe9df;
+  border-right-color: #6e665c;
+  border-bottom-color: #6e665c;
+  box-shadow: 2px 2px #6e665c;
+  background-color: #e7e0d5;
 }
 
 /* Back button spacing */
 .portfolio-page button {
   margin-top: 20px;
+
+  background: #e7e0d5;
+  border: 2px solid #efe9df;
+  border-right-color: #6e665c;
+  border-bottom-color: #6e665c;
+  box-shadow: 2px 2px #6e665c;
+  color: #3b342c;
+  font-family: "Courier New", monospace;
+}
+
+.portfolio-page button:hover {
+  background: #dcd4c7;
 }
 
 /* 📱 Mobile Layout */

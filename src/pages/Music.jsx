@@ -3,11 +3,14 @@ import BackButton from "./shared/BackButton";
 import "../styles/Music.css";
 
 const albums = [
-  { title: "Album One", cover: "/assets/images/randomAlbumCover.jpg" },
-  { title: "Album Two", cover: "/assets/images/randomAlbumCover.jpg" },
-  { title: "Album Three", cover: "/assets/images/randomAlbumCover.jpg" },
-  { title: "Album Four", cover: "/assets/images/randomAlbumCover.jpg" },
-  { title: "Album Five", cover: "/assets/images/randomAlbumCover.jpg" },
+  {
+    title: "like this (forever)",
+    cover: "/assets/images/randomAlbumCover.jpg",
+  },
+  { title: "Demos", cover: "/assets/images/demos.png" },
+  { title: "Hiding", cover: "/assets/images/hidingcoverart.jpeg" },
+  { title: "No Direction EP", cover: "/assets/images/randomAlbumCover.jpg" },
+  { title: "Once", cover: "/assets/images/randomAlbumCover.jpg" },
 ];
 
 export default function Music() {

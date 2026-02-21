@@ -11,13 +11,17 @@ export default function Contact() {
       <div className="contact-box">
         <div className="contact-item">
           <h2>Instagram</h2>
-          <a href="https://instagram.com/yourusername" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.instagram.com/ethanshun"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src="/assets/images/instagram.png"
               alt="Instagram"
               className="icon"
             />
-            @yourusername
+            @ethanshun
           </a>
         </div>
 
@@ -25,13 +29,15 @@ export default function Contact() {
           <h2>Email</h2>
           <ul>
             <li>
-              <a href="mailto:email1@example.com">email1@example.com</a>
+              <a href="mailto:ethanshunwork@gmail.com">
+                ethanshunwork@gmail.com
+              </a>
             </li>
             <li>
-              <a href="mailto:email2@example.com">email2@example.com</a>
+              <a href="mailto:ethan@nickcheo.me">ethan@nickcheo.me</a>
             </li>
             <li>
-              <a href="mailto:email3@example.com">email3@example.com</a>
+              <a href="mailto:team@theunstable.co">team@theunstable.co</a>
             </li>
           </ul>
         </div>

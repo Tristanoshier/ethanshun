@@ -10,20 +10,18 @@ export default function About() {
 
       <div className="about-content">
         <div className="bio-photo">
-          <img src="/assets/images/beaker.jpg" alt="Profile" />
+          <img src="/assets/images/ethanbio.png" alt="Profile Pic" />
         </div>
 
         <div className="bio-text">
           <p>
-            Hello! I'm Ethan, a developer who loves retro design, pixel
-            art, and recreating the nostalgia of the 90s web. When I'm not
-            coding, you can find me listening to 90s music, collecting vintage
-            tech, and making animated GIFs.
-          </p>
-
-          <p>
-            This site is a throwback to the golden era of GeoCities, MSN pages,
-            and neon backgrounds. I hope you enjoy the retro vibes!
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
           </p>
 
           <BackButton />

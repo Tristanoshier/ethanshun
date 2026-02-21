@@ -4,19 +4,19 @@ import "../styles/Portfolio.css";
 
 const clients = [
   {
-    name: "Client One",
+    name: "@nickcheo",
     description:
       "This is sample information about Client One. Built with cutting edge 1998 technology.",
     image: "/assets/images/randomAlbumCover.jpg",
   },
   {
-    name: "Client Two",
+    name: "Sound Design",
     description:
       "Client Two needed a totally radical website with animated GIFs and MIDI background music.",
     image: "/assets/images/randomAlbumCover.jpg",
   },
   {
-    name: "Client Three",
+    name: "Unstable Company",
     description:
       "For Client Three we designed a sleek, corporate 90s aesthetic with heavy bevels.",
     image: "/assets/images/randomAlbumCover.jpg",
