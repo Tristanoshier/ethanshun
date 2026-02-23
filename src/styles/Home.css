@@ -131,11 +131,3 @@
     transform: translateX(-100%);
   }
 }
-
-/* Mobile tweaks */
-@media (max-width: 768px) {
-  .scrolling-image {
-    height: 60px;
-    margin-right: 16px;
-  }
-}

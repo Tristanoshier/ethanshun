@@ -6,8 +6,8 @@ const clients = [
   {
     name: "@nickcheo",
     media: [
-      { type: "video", src: "https://vimeo.com/1167180224" },
       { type: "image", src: "/assets/images/nickcheo1.JPG" },
+      { type: "video", src: "https://vimeo.com/1167180224" },
       { type: "video", src: "https://vimeo.com/1167180231" },
       { type: "image", src: "/assets/images/nickcheo2.JPEG" },
       { type: "image", src: "/assets/images/nickcheo3.png" },
@@ -318,7 +318,6 @@ export default function Portfolio() {
       <div className="portfolio-container">
         {/* CLIENT LIST */}
         <div className="client-list">
-          <h2>Clients</h2>
           {clients.map((client) => (
             <div
               key={client.name}
