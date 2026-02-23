@@ -8,7 +8,7 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <>
+    <div style={{ minHeight: "100vh", backgroundColor: "#c9c1b6" }}>
       <main className="content">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -18,7 +18,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
-    </>
+    </div>
   );
 }
 
