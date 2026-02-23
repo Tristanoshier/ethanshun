@@ -275,7 +275,7 @@
 
   /* Portrait videos scale larger on mobile */
   .video-wrapper.portrait {
-    width: 90%;
+    width: 100%;
   }
 
   .subfolders-left {
