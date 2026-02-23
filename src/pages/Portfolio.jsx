@@ -147,22 +147,22 @@ const clients = [
           },
         ],
       },
-      {
-        name: "Armani Beauty",
-        media: [
-          {
-            type: "video",
-            src: "https://vimeo.com/146022717",
-            orientation: "landscape",
-          },
-        ],
-      },
+      // {
+      //   name: "Armani Beauty",
+      //   media: [
+      //     {
+      //       type: "video",
+      //       src: "https://vimeo.com/146022717",
+      //       orientation: "landscape",
+      //     },
+      //   ],
+      // },
       {
         name: "AUNU",
         media: [
           {
             type: "video",
-            src: "https://vimeo.com/146022717",
+            src: "https://vimeo.com/1167210251",
             orientation: "landscape",
           },
         ],
@@ -172,7 +172,7 @@ const clients = [
         media: [
           {
             type: "video",
-            src: "https://vimeo.com/146022717",
+            src: "https://vimeo.com/1167210643",
             orientation: "landscape",
           },
         ],
@@ -182,8 +182,8 @@ const clients = [
         media: [
           {
             type: "video",
-            src: "https://vimeo.com/146022717",
-            orientation: "landscape",
+            src: "https://vimeo.com/1167211087",
+            orientation: "portrait",
           },
         ],
       },
@@ -192,28 +192,28 @@ const clients = [
         media: [
           {
             type: "video",
-            src: "https://vimeo.com/146022717",
-            orientation: "landscape",
+            src: "https://vimeo.com/1167213786",
+            orientation: "portrait",
           },
         ],
       },
-      {
-        name: "MIU MIU",
-        media: [
-          {
-            type: "video",
-            src: "https://vimeo.com/146022717",
-            orientation: "landscape",
-          },
-        ],
-      },
+      // {
+      //   name: "MIU MIU",
+      //   media: [
+      //     {
+      //       type: "video",
+      //       src: "https://vimeo.com/146022717",
+      //       orientation: "landscape",
+      //     },
+      //   ],
+      // },
       {
         name: "Moussse",
         media: [
           {
             type: "video",
-            src: "https://vimeo.com/146022717",
-            orientation: "landscape",
+            src: "https://vimeo.com/1167213996",
+            orientation: "portrait",
           },
         ],
       },
@@ -222,7 +222,7 @@ const clients = [
         media: [
           {
             type: "video",
-            src: "https://vimeo.com/146022717",
+            src: "https://vimeo.com/1167214302",
             orientation: "landscape",
           },
         ],
@@ -232,8 +232,8 @@ const clients = [
         media: [
           {
             type: "video",
-            src: "https://vimeo.com/146022717",
-            orientation: "landscape",
+            src: "https://vimeo.com/1167214526",
+            orientation: "portrait",
           },
         ],
       },
@@ -242,7 +242,7 @@ const clients = [
         media: [
           {
             type: "video",
-            src: "https://vimeo.com/146022717",
+            src: "https://vimeo.com/1167214817",
             orientation: "landscape",
           },
         ],
