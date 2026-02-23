@@ -103,11 +103,17 @@
 /* Responsive */
 @media (max-width: 768px) {
   .contact-box {
-    width: 90%;
-    padding: 12px;
+    min-height: 80vh; /* take up more of the screen */
+    padding: 16px;
+    justify-content: center; /* center content vertically */
   }
 
   .contact-item {
     width: 100%;
+    font-size: 1rem; /* slightly larger text for readability */
+  }
+
+  .contact-page {
+    padding: 12px;
   }
 }

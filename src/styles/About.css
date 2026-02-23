@@ -1,5 +1,5 @@
 .about-page {
-  background-image: url("../../public/assets/images/paperbackground\ 2.jpg");
+  background-image: url("../../public/assets/images/paperbackground 2.jpg");
   font-family: "Courier New", monospace;
   color: #3b342c; /* warm dark brown */
   padding: 20px;
@@ -30,29 +30,41 @@
   text-shadow: 1px 1px #d8d2c8; /* warm highlight */
 }
 
+/* About content layout */
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px; /* spacing between photo and text */
+  max-width: 1200px; /* limit width on large screens */
+  margin: 0 auto; /* center content */
+}
+
+/* Bio photo */
 .bio-photo img {
-  width: 200px;
+  width: 250px; /* slightly larger for desktop */
+  max-width: 100%;
   border: 3px solid #efe9df;
   border-right-color: #6e665c;
   border-bottom-color: #6e665c;
   box-shadow: 2px 2px #6e665c;
   background-color: #d6cec2;
+  display: block;
 }
 
 /* Text box */
 .bio-text {
-  max-width: 500px;
+  flex: 1; /* take remaining space */
   border: 3px solid #efe9df;
   border-right-color: #6e665c;
   border-bottom-color: #6e665c;
   background-color: #e7e0d5; /* lighter cream panel */
-  padding: 12px;
+  padding: 16px;
   box-shadow: 2px 2px #6e665c;
 }
 
 .bio-text p {
   margin-bottom: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* Retro links */
@@ -66,18 +78,27 @@
   color: #7a6f5a; /* warm taupe hover */
 }
 
-/* Mobile responsiveness */
+/* Back button spacing */
+.bio-text button {
+  margin-top: 20px;
+}
+
+/* ------------------ */
+/* 📱 Mobile Layout   */
+/* ------------------ */
 @media (max-width: 768px) {
-  .about-box {
+  .about-content {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
   .bio-photo img {
-    width: 150px;
+    width: 250px; /* smaller on mobile */
   }
 
   .bio-text {
-    max-width: 90%;
+    width: 90%; /* responsive text width */
+    max-width: none;
   }
 }
