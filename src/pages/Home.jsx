@@ -17,7 +17,7 @@ const apps = [
     desktopX: "10%",
     desktopY: "20%",
     mobileX: "-140%",
-    mobileY: "75%",
+    mobileY: "140%",
   },
   {
     name: "Portfolio",
@@ -35,7 +35,7 @@ const apps = [
     desktopX: "20%",
     desktopY: "70%",
     mobileX: "20%",
-    mobileY: "75%",
+    mobileY: "100%",
   },
   {
     name: "Contact",
