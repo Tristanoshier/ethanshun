@@ -2,6 +2,8 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
+  background-image: url("../../public/assets/images/crumpled\ paper.jpg");
+  z-index: 0;
 }
 
 .home-page::before {
@@ -112,7 +114,7 @@
   }
 
   .scrolling-top-row {
-    grid-column: 1 / 0; /* span full grid width */
+    /* grid-column: 1 / 4; */
   }
 
   .scrolling-image {

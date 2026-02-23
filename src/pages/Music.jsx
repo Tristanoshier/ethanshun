@@ -5,12 +5,15 @@ import "../styles/Music.css";
 const albums = [
   {
     title: "like this (forever)",
-    cover: "/assets/images/randomAlbumCover.jpg",
+    cover: "/assets/images/like this (forever).png",
   },
   { title: "Demos", cover: "/assets/images/demos.png" },
   { title: "Hiding", cover: "/assets/images/hidingcoverart.jpeg" },
-  { title: "No Direction EP", cover: "/assets/images/randomAlbumCover.jpg" },
-  { title: "Once", cover: "/assets/images/randomAlbumCover.jpg" },
+  {
+    title: "No Direction EP",
+    cover: "assets/images/no direction ep cover.png",
+  },
+  { title: "Once", cover: "/assets/images/once cover.png" },
 ];
 
 export default function Music() {

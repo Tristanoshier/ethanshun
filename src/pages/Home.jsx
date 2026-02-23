@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 import "../styles/Home.css";
 
 const topImages = [
-  "/assets/images/ethanlogo1.gif",
-  "/assets/images/ethanlogo2.gif",
-  "/assets/images/ethanlogo3.gif",
-  "/assets/images/ethanlogo4.gif",
+  "/assets/images/ethanlogo1.png",
+  "/assets/images/ethanlogo2.png",
+  "/assets/images/ethanlogo3.png",
+  "/assets/images/ethanlogo4.png",
 ];
 
 const apps = [
   {
     name: "About",
     path: "/about",
-    image: "/assets/images/beaker.jpg",
+    image: "/assets/images/beaker.png",
     desktopX: "10%",
     desktopY: "20%",
     mobileX: "10%",
