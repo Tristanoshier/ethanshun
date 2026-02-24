@@ -114,7 +114,7 @@
   }
 
   .scrolling-top-row {
-    /* grid-column: 1 / 4; */
+    width: 200%;
   }
 
   .scrolling-image {
