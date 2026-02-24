@@ -161,7 +161,6 @@
 /* Subfolders (nested projects) */
 .subfolders {
   display: none;
-
 }
 
 .portfolio-loading {
@@ -275,6 +274,11 @@
 
   /* Portrait videos scale larger on mobile */
   .video-wrapper.portrait {
+    width: 100%;
+  }
+
+  /* Portrait videos scale larger on mobile */
+  .video-wrapper.landscape {
     width: 100%;
   }
 

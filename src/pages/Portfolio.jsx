@@ -7,11 +7,11 @@ const clients = [
     name: "@nickcheo",
     media: [
       { type: "image", src: "/assets/images/nickcheo1.JPG" },
-      { type: "video", src: "https://vimeo.com/1167180224" },
-      { type: "video", src: "https://vimeo.com/1167180231" },
+      { type: "video", src: "https://vimeo.com/1167180224", orientation: "portrait" },
+      { type: "video", src: "https://vimeo.com/1167180231", orientation: "portrait" },
       { type: "image", src: "/assets/images/nickcheo2.JPEG" },
       { type: "image", src: "/assets/images/nickcheo3.png" },
-      { type: "video", src: "https://vimeo.com/1167180094" },
+      { type: "video", src: "https://vimeo.com/1167180094", orientation: "landscape" },
     ],
   },
   {
@@ -252,9 +252,9 @@ const clients = [
   {
     name: "Unstable Company",
     media: [
-      { type: "video", src: "https://vimeo.com/1167184204" },
+      { type: "video", src: "https://vimeo.com/1167184204", orientation: "landscape" },
       { type: "image", src: "/assets/images/unstableco.JPG" },
-      { type: "video", src: "https://vimeo.com/1167184069" },
+      { type: "video", src: "https://vimeo.com/1167184069", orientation: "portrait" },
     ],
   },
 ];
