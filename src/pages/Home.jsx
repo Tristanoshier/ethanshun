@@ -34,7 +34,7 @@ const apps = [
     image: "/assets/images/boombox gif.gif",
     desktopX: "20%",
     desktopY: "70%",
-    mobileX: "28%",
+    mobileX: "12%",
     mobileY: "82%",
   },
   {
@@ -43,7 +43,7 @@ const apps = [
     image: "/assets/images/bird.png",
     desktopX: "80%",
     desktopY: "65%",
-    mobileX: "20%",
+    mobileX: "50%",
     mobileY: "44%",
   },
 ];
