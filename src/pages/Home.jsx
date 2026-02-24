@@ -50,7 +50,9 @@ const apps = [
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [startScroll, setStartScroll] = useState(false);
 
+  // Resize listener
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -60,10 +62,24 @@ export default function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // 🔥 Delay animation until fully loaded
+  useEffect(() => {
+    const handleLoad = () => {
+      setStartScroll(true);
+    };
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
+
   return (
     <div className="home-page desktop">
       <div className="scrolling-top-row">
-        <div className="scrolling-track">
+        <div className={`scrolling-track ${startScroll ? "start-scroll" : ""}`}>
           {topImages.concat(topImages).map((src, i) => (
             <img key={i} src={src} alt="" className="scrolling-image" />
           ))}

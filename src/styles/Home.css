@@ -31,7 +31,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-
   padding: 16px;
   width: 100%;
 }
@@ -43,6 +42,7 @@
   object-fit: contain;
 }
 
+/* Scrolling row container */
 .scrolling-top-row {
   overflow: hidden;
   white-space: nowrap;
@@ -52,10 +52,29 @@
   padding: 16px 0;
 }
 
+/* 🔥 IMPORTANT: Animation removed from here */
 .scrolling-track {
   display: flex;
   width: max-content;
+
+  /* Performance fixes for mobile */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* 🔥 Animation only starts when JS adds this class */
+.start-scroll {
   animation: scrollLeft 20s linear infinite;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .scrolling-image {
@@ -93,6 +112,7 @@
 .desktop-icon:hover {
   transform: scale(1.08);
 }
+
 /* Mobile tweaks */
 @media (max-width: 768px) {
   .home-page::before {
@@ -109,14 +129,5 @@
   .scrolling-image {
     height: 60px;
     margin-right: 16px;
-  }
-}
-
-@keyframes scrollLeft {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
   }
 }
