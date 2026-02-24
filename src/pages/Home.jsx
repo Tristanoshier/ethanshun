@@ -16,8 +16,8 @@ const apps = [
     image: "/assets/images/beaker.png",
     desktopX: "10%",
     desktopY: "20%",
-    mobileX: "72%",
-    mobileY: "14%",
+    mobileX: "40%",
+    mobileY: "40%",
   },
   {
     name: "Portfolio",
