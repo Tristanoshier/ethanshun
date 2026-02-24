@@ -17,7 +17,7 @@ export default function Contact() {
             rel="noreferrer"
           >
             <img
-              src="/assets/images/instagram.png"
+              src="/assets/images/oldinstalogo.png"
               alt="Instagram"
               className="icon"
             />

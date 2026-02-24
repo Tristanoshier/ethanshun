@@ -81,12 +81,6 @@
 /* Icons (like Instagram) */
 .icon {
   width: 24px;
-  height: 24px;
-  border: 2px solid #efe9df;
-  border-right-color: #6e665c;
-  border-bottom-color: #6e665c;
-  box-shadow: 1px 1px #6e665c;
-  background-color: #d6cec2;
 }
 
 /* Email list */
