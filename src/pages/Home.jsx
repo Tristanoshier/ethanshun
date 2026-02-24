@@ -16,7 +16,7 @@ const apps = [
     image: "/assets/images/beaker.png",
     desktopX: "10%",
     desktopY: "20%",
-    mobileX: "40%",
+    mobileX: "10%",
     mobileY: "40%",
   },
   {
@@ -25,8 +25,8 @@ const apps = [
     image: "/assets/images/castle.png",
     desktopX: "40%",
     desktopY: "30%",
-    mobileX: "12%",
-    mobileY: "58%",
+    mobileX: "35%",
+    mobileY: "70%",
   },
   {
     name: "Music",
@@ -34,7 +34,7 @@ const apps = [
     image: "/assets/images/boombox gif.gif",
     desktopX: "20%",
     desktopY: "70%",
-    mobileX: "48%",
+    mobileX: "28%",
     mobileY: "82%",
   },
   {
@@ -43,7 +43,7 @@ const apps = [
     image: "/assets/images/bird.png",
     desktopX: "80%",
     desktopY: "65%",
-    mobileX: "86%",
+    mobileX: "20%",
     mobileY: "44%",
   },
 ];

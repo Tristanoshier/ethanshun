@@ -99,13 +99,6 @@
     background-position: center top;
   }
 
-  .home-page.desktop {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    padding: 32px;
-  }
-
   .desktop-icon {
     position: relative;
     inset: auto;
