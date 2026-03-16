@@ -50,7 +50,12 @@ export default function Music() {
 
       <div className="coverflow">
         {albums.map((album, index) => {
-          const offset = index - current;
+          const rawOffset = index - current;
+          const half = albums.length / 2;
+          const offset =
+            rawOffset > half ? rawOffset - albums.length :
+            rawOffset < -half ? rawOffset + albums.length :
+            rawOffset;
 
           return (
             <div

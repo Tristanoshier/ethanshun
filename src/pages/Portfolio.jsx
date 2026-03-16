@@ -1,22 +1,51 @@
-import { useState, useEffect } from "react";
+import { Fragment, useState, useEffect } from "react";
 import BackButton from "./shared/BackButton";
 import "../styles/Portfolio.css";
 
 const clients = [
   {
-    name: "@nickcheo",
-    media: [
-      { type: "image", src: "/assets/images/nickcheo1.JPG" },
-      { type: "video", src: "https://vimeo.com/1167180224", orientation: "portrait" },
-      { type: "video", src: "https://vimeo.com/1167180231", orientation: "portrait" },
-      { type: "image", src: "/assets/images/nickcheo2.JPEG" },
-      { type: "image", src: "/assets/images/nickcheo3.png" },
-      { type: "video", src: "https://vimeo.com/1167180094", orientation: "landscape" },
-    ],
-  },
-  {
     name: "Sound Design",
     children: [
+      {
+        name: "AUNU",
+        media: [
+          {
+            type: "video",
+            src: "https://vimeo.com/1167210251",
+            orientation: "landscape",
+          },
+        ],
+      },
+      {
+        name: "Abbots",
+        media: [
+          {
+            type: "video",
+            src: "https://vimeo.com/1167209451",
+            orientation: "portrait",
+          },
+        ],
+      },
+      {
+        name: "Celsius",
+        media: [
+          {
+            type: "video",
+            src: "https://vimeo.com/1167211087",
+            orientation: "portrait",
+          },
+        ],
+      },
+      {
+        name: "Eric Emanuel",
+        media: [
+          {
+            type: "video",
+            src: "https://vimeo.com/1167213786",
+            orientation: "portrait",
+          },
+        ],
+      },
       {
         name: "Kiehl's",
         media: [
@@ -34,6 +63,21 @@ const clients = [
             type: "video",
             src: "https://vimeo.com/1167190427",
             orientation: "portrait",
+          },
+        ],
+      },
+      {
+        name: "Lexus",
+        media: [
+          {
+            type: "video",
+            src: "https://vimeo.com/1167210643",
+            orientation: "landscape",
+          },
+          {
+            type: "video",
+            src: "https://vimeo.com/1167214302",
+            orientation: "landscape",
           },
         ],
       },
@@ -98,6 +142,16 @@ const clients = [
         ],
       },
       {
+        name: "Moussse",
+        media: [
+          {
+            type: "video",
+            src: "https://vimeo.com/1167213996",
+            orientation: "portrait",
+          },
+        ],
+      },
+      {
         name: "Purple Mag",
         media: [
           {
@@ -114,6 +168,16 @@ const clients = [
             type: "video",
             src: "https://vimeo.com/1167200839",
             orientation: "landscape",
+          },
+        ],
+      },
+      {
+        name: "Tatcha",
+        media: [
+          {
+            type: "video",
+            src: "https://vimeo.com/1167214526",
+            orientation: "portrait",
           },
         ],
       },
@@ -138,106 +202,6 @@ const clients = [
         ],
       },
       {
-        name: "Abbots",
-        media: [
-          {
-            type: "video",
-            src: "https://vimeo.com/1167209451",
-            orientation: "portrait",
-          },
-        ],
-      },
-      // {
-      //   name: "Armani Beauty",
-      //   media: [
-      //     {
-      //       type: "video",
-      //       src: "https://vimeo.com/146022717",
-      //       orientation: "landscape",
-      //     },
-      //   ],
-      // },
-      {
-        name: "AUNU",
-        media: [
-          {
-            type: "video",
-            src: "https://vimeo.com/1167210251",
-            orientation: "landscape",
-          },
-        ],
-      },
-      {
-        name: "Cello DC",
-        media: [
-          {
-            type: "video",
-            src: "https://vimeo.com/1167210643",
-            orientation: "landscape",
-          },
-        ],
-      },
-      {
-        name: "Celsius",
-        media: [
-          {
-            type: "video",
-            src: "https://vimeo.com/1167211087",
-            orientation: "portrait",
-          },
-        ],
-      },
-      {
-        name: "Eric Emanuel",
-        media: [
-          {
-            type: "video",
-            src: "https://vimeo.com/1167213786",
-            orientation: "portrait",
-          },
-        ],
-      },
-      // {
-      //   name: "MIU MIU",
-      //   media: [
-      //     {
-      //       type: "video",
-      //       src: "https://vimeo.com/146022717",
-      //       orientation: "landscape",
-      //     },
-      //   ],
-      // },
-      {
-        name: "Moussse",
-        media: [
-          {
-            type: "video",
-            src: "https://vimeo.com/1167213996",
-            orientation: "portrait",
-          },
-        ],
-      },
-      {
-        name: "Tabla DC",
-        media: [
-          {
-            type: "video",
-            src: "https://vimeo.com/1167214302",
-            orientation: "landscape",
-          },
-        ],
-      },
-      {
-        name: "Tatcha",
-        media: [
-          {
-            type: "video",
-            src: "https://vimeo.com/1167214526",
-            orientation: "portrait",
-          },
-        ],
-      },
-      {
         name: "Wolford",
         media: [
           {
@@ -250,11 +214,59 @@ const clients = [
     ],
   },
   {
-    name: "Unstable Company",
+    name: "@nickcheo (Manager)",
     media: [
-      { type: "video", src: "https://vimeo.com/1167184204", orientation: "landscape" },
-      { type: "image", src: "/assets/images/unstableco.JPG" },
-      { type: "video", src: "https://vimeo.com/1167184069", orientation: "portrait" },
+      {
+        type: "image",
+        src: "/assets/images/nickcheo1.JPG",
+        description: "Ani, Nick, Isaac, and Myself DJing in nyc - august 24",
+      },
+      {
+        type: "video",
+        src: "https://vimeo.com/1167180224",
+        orientation: "portrait",
+        description:
+          "Nick on tour with Pinkpantheress for 13 US show dates - Fall 25",
+      },
+
+      {
+        type: "image",
+        src: "/assets/images/nickcheo3.png",
+        description: "Brands, companies and organizations we have worked with",
+      },
+      {
+        type: "video",
+        src: "https://vimeo.com/1167180094",
+        orientation: "landscape",
+        description:
+          "Executive Production for Serato x Apple Music Campaign Feb 25",
+      },
+      {
+        type: "video",
+        src: "https://vimeo.com/1167180231",
+        orientation: "portrait",
+        description: "Stage design/creative with Luca Pantel",
+      },
+      {
+        type: "image",
+        src: "/assets/images/nickcheo2.JPEG",
+        description: "Stage design/creative with Luca Pantel",
+      },
+    ],
+  },
+
+  {
+    name: "Unstable Company",
+    bio: `The Unstable Company is a New York City based multimedia and full-service production agency founded in 2024 by Ethan Shun and Erica Ko, focused on artist management and viral.
+
+Unstable has worked with brands and companies including Marc Jacobs, Apple Music, Bang & Olufsen, Fanatics, Serato, Sony Music, Warner Music, Capitol Records, 10K Projects, FX, Hulu, 424, Posh.vip, etc.
+
+The Unstable Company produces immersive exhibitions, campaigns, social media marketing, clothing, and physical goods, partnering with artists and brands to develop original ideas from concept through.`,
+    links: [
+      { label: "Website", url: "https://unstablecompany.example" },
+      { label: "Instagram", url: "https://instagram.com/unstablecompany" },
+      { label: "LinkedIn", url: "https://instagram.com/unstablecompany" },
+      { label: "Contact", url: "mailto:hello@unstablecompany.example" },
     ],
   },
 ];
@@ -318,34 +330,36 @@ export default function Portfolio() {
       <div className="portfolio-container">
         {/* CLIENT LIST */}
         <div className="client-list">
-          {clients.map((client) => (
-            <div
-              key={client.name}
-              className={`client-item ${
-                selectedClient.name === client.name ? "active" : ""
-              }`}
-              onClick={() => handleSelectClient(client)}
-            >
-              {client.name}
-            </div>
-          ))}
+          {clients.map((client) => {
+            const isSelected = selectedClient.name === client.name;
 
-          {/* Subfolders dropdown for selected client (desktop only) */}
-          {selectedClient.children && (
-            <div className="subfolders-left">
-              {selectedClient.children.map((child) => (
+            return (
+              <Fragment key={client.name}>
                 <div
-                  key={child.name}
-                  className={`client-item ${
-                    selectedChild?.name === child.name ? "active" : ""
-                  }`}
-                  onClick={() => handleSelectChild(child)}
+                  className={`client-item ${isSelected ? "active" : ""}`}
+                  onClick={() => handleSelectClient(client)}
                 >
-                  {child.name}
+                  {client.name}
                 </div>
-              ))}
-            </div>
-          )}
+
+                {client.children && isSelected && (
+                  <div className="client-children">
+                    {client.children.map((child) => (
+                      <div
+                        key={child.name}
+                        className={`client-item child ${
+                          selectedChild?.name === child.name ? "active" : ""
+                        }`}
+                        onClick={() => handleSelectChild(child)}
+                      >
+                        {child.name}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </Fragment>
+            );
+          })}
 
           <br />
           <BackButton />
@@ -372,6 +386,25 @@ export default function Portfolio() {
             </div>
           )}
 
+          {/* Client bio + links (optional) */}
+          {selectedClient.bio && (
+            <div className="client-bio">
+              <p>{selectedClient.bio}</p>
+
+              {selectedClient.links && (
+                <ul className="client-links">
+                  {selectedClient.links.map((link) => (
+                    <li key={link.url}>
+                      <a href={link.url} target="_blank" rel="noreferrer">
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          )}
+
           {/* Media Scroll */}
           <div className="media-scroll">
             {mediaToDisplay.map((item, index) => (
@@ -392,6 +425,9 @@ export default function Portfolio() {
                       title={`video-${index}`}
                     />
                   </div>
+                )}
+                {item.description && (
+                  <p className="media-description">{item.description}</p>
                 )}
               </div>
             ))}

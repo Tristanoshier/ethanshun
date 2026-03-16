@@ -1,6 +1,6 @@
 .portfolio-page {
   background-image: url("../../public/assets/images/gridpaper.jpg");
-  font-family: "Courier New", monospace;
+  font-family: "EB Garamond", serif;
   padding: 20px;
   min-height: 100vh;
   color: #3b342c;
@@ -47,6 +47,27 @@
   margin-top: 0;
   text-align: center;
   color: #5a4e3f;
+}
+
+/* Child items appear indented under the selected parent */
+.client-children {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  padding-left: 16px;
+}
+
+.client-item.child {
+  font-size: 0.9rem;
+  padding-left: 12px;
+  border-left: 3px solid rgba(59, 52, 44, 0.25);
+}
+
+@media (max-width: 768px) {
+  .client-children {
+    display: none; /* mobile uses the bottom tab row instead */
+  }
 }
 
 /* Individual client items */
@@ -101,6 +122,58 @@
 /* Media items */
 .media-item {
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Media description text */
+.media-description {
+  margin: 0;
+  text-align: center;
+  color: #3b342c;
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* Client bio + links */
+.client-bio {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: rgba(231, 224, 213, 0.85);
+  border: 2px solid #efe9df;
+  border-right-color: #6e665c;
+  border-bottom-color: #6e665c;
+  box-shadow: 2px 2px #6e665c;
+  color: #3b342c;
+  font-family: "EB Garamond", serif;
+  line-height: 1.5;
+}
+
+.client-bio p {
+  margin: 0 0 12px;
+}
+
+.client-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.client-links a {
+  color: #3b342c;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.client-links a:hover {
+  color: #5a4e3f;
 }
 
 /* Images keep retro styling */
