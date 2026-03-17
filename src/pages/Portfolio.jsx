@@ -36,7 +36,7 @@ const clients = [
           },
         ],
       },
-       {
+      {
         name: "Ebbets",
         media: [
           {
@@ -56,7 +56,7 @@ const clients = [
           },
         ],
       },
-       {
+      {
         name: "Hoka",
         media: [
           {
@@ -181,7 +181,7 @@ const clients = [
           },
         ],
       },
-        {
+      {
         name: "ON",
         media: [
           {
@@ -189,27 +189,27 @@ const clients = [
             src: "https://vimeo.com/1174201888",
             orientation: "portrait",
           },
-           {
+          {
             type: "video",
             src: "https://vimeo.com/1174201997",
             orientation: "portrait",
           },
-           {
+          {
             type: "video",
             src: "https://vimeo.com/1174201631",
             orientation: "portrait",
           },
-           {
+          {
             type: "video",
             src: "https://vimeo.com/1174203294",
             orientation: "portrait",
           },
-           {
+          {
             type: "video",
             src: "https://vimeo.com/1174209448",
             orientation: "portrait",
           },
-           {
+          {
             type: "video",
             src: "https://vimeo.com/1174209678",
             orientation: "portrait",
@@ -266,15 +266,15 @@ const clients = [
           },
         ],
       },
-       {
+      {
         name: "Thome Browne",
         media: [
           {
-            "type": "video",
-            "src": "https://vimeo.com/1174211924",
-            "orientation": "portrait"
-          }
-        ]
+            type: "video",
+            src: "https://vimeo.com/1174211924",
+            orientation: "portrait",
+          },
+        ],
       },
       {
         name: "Wolford",
@@ -289,7 +289,7 @@ const clients = [
     ],
   },
   {
-    name: "@nickcheo (Manager)",
+    name: "@nickcheo (manager)",
     media: [
       {
         type: "image",
@@ -338,10 +338,16 @@ Unstable has worked with brands and companies including Marc Jacobs, Apple Music
 
 The Unstable Company produces immersive exhibitions, campaigns, social media marketing, clothing, and physical goods, partnering with artists and brands to develop original ideas from concept through.`,
     links: [
-      { label: "Website", url: "https://unstablecompany.example" },
-      { label: "Instagram", url: "https://instagram.com/unstablecompany" },
-      { label: "LinkedIn", url: "https://instagram.com/unstablecompany" },
-      { label: "Contact", url: "mailto:hello@unstablecompany.example" },
+      { label: "Website", url: "https://theunstable.co/" },
+      {
+        label: "Instagram",
+        url: "https://www.instagram.com/theunstablecompany/",
+      },
+      {
+        label: "LinkedIn",
+        url: "https://www.linkedin.com/company/the-unstable-company",
+      },
+      { label: "Contact", url: "mailto:team@theunstable.co" },
     ],
   },
 ];
@@ -398,9 +404,9 @@ export default function Portfolio() {
 
   return (
     <div className="portfolio-page">
-      <header className="retro-header">
-        <h1>My Portfolio</h1>
-      </header>
+      <div className="portfolio-blurb">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
 
       <div className="portfolio-container">
         {/* CLIENT LIST */}
@@ -417,49 +423,31 @@ export default function Portfolio() {
                   {client.name}
                 </div>
 
-                {client.children && isSelected && (
-                  <div className="client-children">
-                    {client.children.map((child) => (
-                      <div
-                        key={child.name}
-                        className={`client-item child ${
-                          selectedChild?.name === child.name ? "active" : ""
-                        }`}
-                        onClick={() => handleSelectChild(child)}
-                      >
-                        {child.name}
-                      </div>
-                    ))}
-                  </div>
-                )}
               </Fragment>
             );
           })}
 
-          <br />
-          <BackButton />
         </div>
 
         {/* CLIENT DETAILS */}
         <div className="client-details">
-          <h2>{selectedClient.name}</h2>
-
-          {/* Subfolders / nested projects */}
-          {selectedClient.children && (
-            <div className="subfolders">
-              {selectedClient.children.map((child) => (
-                <div
-                  key={child.name}
-                  className={`client-item ${
-                    selectedChild?.name === child.name ? "active" : ""
-                  }`}
-                  onClick={() => handleSelectChild(child)}
-                >
-                  {child.name}
-                </div>
-              ))}
-            </div>
-          )}
+          <div className="client-header">
+            <h2>{selectedClient.name}</h2>
+            {selectedClient.children && (
+              <select
+                className="client-dropdown"
+                value={selectedChild?.name || ""}
+                onChange={(e) => {
+                  const child = selectedClient.children.find(c => c.name === e.target.value);
+                  if (child) handleSelectChild(child);
+                }}
+              >
+                {selectedClient.children.map((child) => (
+                  <option key={child.name} value={child.name}>{child.name}</option>
+                ))}
+              </select>
+            )}
+          </div>
 
           {/* Client bio + links (optional) */}
           {selectedClient.bio && (
@@ -509,6 +497,8 @@ export default function Portfolio() {
           </div>
         </div>
       </div>
+
+      <BackButton />
     </div>
   );
 }
