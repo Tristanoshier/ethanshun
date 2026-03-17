@@ -16,22 +16,32 @@ const clients = [
           },
         ],
       },
-      {
-        name: "Abbots",
-        media: [
-          {
-            type: "video",
-            src: "https://vimeo.com/1167209451",
-            orientation: "portrait",
-          },
-        ],
-      },
+      //   {
+      //   name: "Armani Beauty",
+      //   media: [
+      //     {
+      //       type: "video",
+      //       src: "https://vimeo.com/",
+      //       orientation: "landscape",
+      //     },
+      //   ],
+      // },
       {
         name: "Celsius",
         media: [
           {
             type: "video",
             src: "https://vimeo.com/1167211087",
+            orientation: "portrait",
+          },
+        ],
+      },
+       {
+        name: "Ebbets",
+        media: [
+          {
+            type: "video",
+            src: "https://vimeo.com/1167209451",
             orientation: "portrait",
           },
         ],
@@ -43,6 +53,16 @@ const clients = [
             type: "video",
             src: "https://vimeo.com/1167213786",
             orientation: "portrait",
+          },
+        ],
+      },
+       {
+        name: "Hoka",
+        media: [
+          {
+            type: "video",
+            src: "https://vimeo.com/1174212250",
+            orientation: "landscape",
           },
         ],
       },
@@ -141,12 +161,57 @@ const clients = [
           },
         ],
       },
+      //  {
+      //   name: "MIU MIU",
+      //   media: [
+      //     {
+      //       type: "video",
+      //       src: "https://vimeo.com/",
+      //       orientation: "landscape",
+      //     },
+      //   ],
+      // },
       {
         name: "Moussse",
         media: [
           {
             type: "video",
             src: "https://vimeo.com/1167213996",
+            orientation: "portrait",
+          },
+        ],
+      },
+        {
+        name: "ON",
+        media: [
+          {
+            type: "video",
+            src: "https://vimeo.com/1174201888",
+            orientation: "portrait",
+          },
+           {
+            type: "video",
+            src: "https://vimeo.com/1174201997",
+            orientation: "portrait",
+          },
+           {
+            type: "video",
+            src: "https://vimeo.com/1174201631",
+            orientation: "portrait",
+          },
+           {
+            type: "video",
+            src: "https://vimeo.com/1174203294",
+            orientation: "portrait",
+          },
+           {
+            type: "video",
+            src: "https://vimeo.com/1174209448",
+            orientation: "portrait",
+          },
+           {
+            type: "video",
+            src: "https://vimeo.com/1174209678",
             orientation: "portrait",
           },
         ],
@@ -200,6 +265,16 @@ const clients = [
             orientation: "portrait",
           },
         ],
+      },
+       {
+        name: "Thome Browne",
+        media: [
+          {
+            "type": "video",
+            "src": "https://vimeo.com/1174211924",
+            "orientation": "portrait"
+          }
+        ]
       },
       {
         name: "Wolford",
