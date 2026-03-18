@@ -25,7 +25,7 @@
 
 .retro-header h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: 36px;
   color: #3b342c; /* deep brown */
   text-shadow: 1px 1px #d8d2c8; /* soft warm highlight */
 }
@@ -59,7 +59,7 @@
 .contact-item h2 {
   margin-top: 0;
   margin-bottom: 12px;
-  font-size: 18px;
+  font-size: 22px;
   color: #5a4e3f; /* muted brown heading */
   text-shadow: 1px 1px #f3ede4;
 }
@@ -69,6 +69,7 @@
   color: #4f5b3a; /* muted olive accent */
   text-decoration: underline;
   font-weight: bold;
+  font-size: 18px;
   display: inline-flex;
   align-items: center;
   gap: 8px;

@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import BackButton from "./shared/BackButton";
 import "../styles/Music.css";
 
@@ -6,19 +7,34 @@ const albums = [
   {
     title: "like this (forever)",
     cover: "/assets/images/like this (forever).png",
+    link: "https://distrokid.com/hyperfollow/edizzy2/like-this-forever?ref=release",
   },
-  { title: "Demos", cover: "/assets/images/demos.png" },
-  { title: "Hiding", cover: "/assets/images/hidingcoverart.jpeg" },
+  {
+    title: "Demos",
+    cover: "/assets/images/demos.png",
+    link: "/demos",
+  },
+  {
+    title: "Hiding",
+    cover: "/assets/images/hidingcoverart.jpeg",
+    link: "https://distrokid.com/hyperfollow/edizzy2/hiding?ref=release",
+  },
   {
     title: "No Direction EP",
     cover: "assets/images/no direction ep cover.png",
+    link: "https://distrokid.com/hyperfollow/edizzy2/no-direction?ref=release",
   },
-  { title: "Once", cover: "/assets/images/once cover.png" },
+  {
+    title: "Once",
+    cover: "/assets/images/once cover.png",
+    link: "https://distrokid.com/hyperfollow/edizzy2/once?ref=release",
+  },
 ];
 
 export default function Music() {
   const [current, setCurrent] = useState(0);
   const touchStartX = useRef(null);
+  const navigate = useNavigate();
 
   const next = () => {
     setCurrent((prev) => (prev + 1) % albums.length);
@@ -30,6 +46,16 @@ export default function Music() {
 
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleAlbumClick = (album) => {
+    if (album.link.startsWith("/")) {
+      // Internal route
+      navigate(album.link);
+    } else {
+      // External link
+      window.open(album.link, "_blank");
+    }
   };
 
   const handleTouchEnd = (e) => {
@@ -53,9 +79,11 @@ export default function Music() {
           const rawOffset = index - current;
           const half = albums.length / 2;
           const offset =
-            rawOffset > half ? rawOffset - albums.length :
-            rawOffset < -half ? rawOffset + albums.length :
-            rawOffset;
+            rawOffset > half
+              ? rawOffset - albums.length
+              : rawOffset < -half
+                ? rawOffset + albums.length
+                : rawOffset;
 
           return (
             <div
@@ -71,6 +99,7 @@ export default function Music() {
                 zIndex: albums.length - Math.abs(offset),
                 opacity: Math.abs(offset) > 4 ? 0 : 1,
               }}
+              onClick={() => handleAlbumClick(albums[index])}
             >
               <img src={album.cover} alt={album.title} />
               {index === current && (

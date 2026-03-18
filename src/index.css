@@ -13,7 +13,7 @@ html,
 body {
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
-  background-color: #c9c1b6;
+  background-color: #d6d2cb;
   margin: 0;
   padding: 0;
   min-height: 100%;

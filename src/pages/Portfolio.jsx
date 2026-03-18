@@ -16,16 +16,16 @@ const clients = [
           },
         ],
       },
-      //   {
-      //   name: "Armani Beauty",
-      //   media: [
-      //     {
-      //       type: "video",
-      //       src: "https://vimeo.com/",
-      //       orientation: "landscape",
-      //     },
-      //   ],
-      // },
+        {
+        name: "Armani Beauty",
+        media: [
+          {
+            type: "video",
+            src: "https://vimeo.com/1174798727",
+            orientation: "landscape",
+          },
+        ],
+      },
       {
         name: "Celsius",
         media: [
@@ -83,6 +83,36 @@ const clients = [
             type: "video",
             src: "https://vimeo.com/1167190427",
             orientation: "portrait",
+          },
+        ],
+      },
+       {
+        name: "Lancome",
+        media: [
+          {
+            type: "video",
+            src: "https://vimeo.com/1174801100",
+            orientation: "landscape",
+          },
+          {
+            type: "video",
+            src: "https://vimeo.com/1174801166",
+            orientation: "landscape",
+          },
+           {
+            type: "video",
+            src: "https://vimeo.com/1174800837",
+            orientation: "landscape",
+          },
+           {
+            type: "video",
+            src: "https://vimeo.com/1174801024",
+            orientation: "landscape",
+          },
+           {
+            type: "video",
+            src: "https://vimeo.com/1174800946",
+            orientation: "landscape",
           },
         ],
       },
@@ -161,16 +191,16 @@ const clients = [
           },
         ],
       },
-      //  {
-      //   name: "MIU MIU",
-      //   media: [
-      //     {
-      //       type: "video",
-      //       src: "https://vimeo.com/",
-      //       orientation: "landscape",
-      //     },
-      //   ],
-      // },
+       {
+        name: "MIU MIU",
+        media: [
+          {
+            type: "video",
+            src: "https://vimeo.com/1174798849",
+            orientation: "landscape",
+          },
+        ],
+      },
       {
         name: "Moussse",
         media: [
@@ -264,6 +294,11 @@ const clients = [
             src: "https://vimeo.com/1167203820",
             orientation: "portrait",
           },
+            {
+            type: "video",
+            src: "https://vimeo.com/1174800289",
+            orientation: "landscape",
+          },
         ],
       },
       {
@@ -290,6 +325,8 @@ const clients = [
   },
   {
     name: "@nickcheo (manager)",
+    customText: "I oversee creative output and help shape music, brand campaigns, live shows, and visual projects.",
+    email: "nick@nickcheo.me",
     media: [
       {
         type: "image",
@@ -363,11 +400,40 @@ export default function Portfolio() {
     clients[0].children ? clients[0].children[0] : null,
   );
   const [loading, setLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+  const [showBlurb, setShowBlurb] = useState(true);
+  const [blurbFading, setBlurbFading] = useState(false);
 
   // Initial load
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1500);
     return () => clearTimeout(timer);
+  }, []);
+
+  // Check for mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Hide blurb after 10 seconds with fade animation
+  useEffect(() => {
+    const fadeTimer = setTimeout(() => {
+      setBlurbFading(true);
+    }, 8000); // Start fading 2 seconds before full hide
+
+    const hideTimer = setTimeout(() => {
+      setShowBlurb(false);
+    }, 10000);
+
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(hideTimer);
+    };
   }, []);
 
   const handleSelectClient = (client) => {
@@ -404,9 +470,15 @@ export default function Portfolio() {
 
   return (
     <div className="portfolio-page">
-      <div className="portfolio-blurb">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
+      {showBlurb && (
+        <div className={`portfolio-blurb ${blurbFading ? 'fade-out' : ''}`}>
+          <p>
+            Welcome to my portfolio. I'm a multidisciplinary creative who operates
+            across management, music production, sound design, and creative
+            direction.
+          </p>
+        </div>
+      )}
 
       <div className="portfolio-container">
         {/* CLIENT LIST */}
@@ -422,28 +494,30 @@ export default function Portfolio() {
                 >
                   {client.name}
                 </div>
-
               </Fragment>
             );
           })}
-
         </div>
 
         {/* CLIENT DETAILS */}
         <div className="client-details">
           <div className="client-header">
             <h2>{selectedClient.name}</h2>
-            {selectedClient.children && (
+            {selectedClient.children && isMobile && (
               <select
                 className="client-dropdown"
                 value={selectedChild?.name || ""}
                 onChange={(e) => {
-                  const child = selectedClient.children.find(c => c.name === e.target.value);
+                  const child = selectedClient.children.find(
+                    (c) => c.name === e.target.value,
+                  );
                   if (child) handleSelectChild(child);
                 }}
               >
                 {selectedClient.children.map((child) => (
-                  <option key={child.name} value={child.name}>{child.name}</option>
+                  <option key={child.name} value={child.name}>
+                    {child.name}
+                  </option>
                 ))}
               </select>
             )}
@@ -468,33 +542,126 @@ export default function Portfolio() {
             </div>
           )}
 
-          {/* Media Scroll */}
-          <div className="media-scroll">
-            {mediaToDisplay.map((item, index) => (
-              <div key={index} className="media-item">
-                {item.type === "image" ? (
-                  <img src={item.src} alt={`media-${index}`} />
-                ) : (
+          {/* For desktop with children, show children list and media side by side */}
+          {selectedClient.children && !isMobile ? (
+            <div className="client-content">
+              <div className="children-list">
+                {selectedClient.children.map((child) => (
                   <div
-                    className={`video-wrapper ${
-                      item.orientation === "portrait" ? "portrait" : "landscape"
-                    }`}
+                    key={child.name}
+                    className={`child-item ${selectedChild?.name === child.name ? "active" : ""}`}
+                    onClick={() => handleSelectChild(child)}
                   >
-                    <iframe
-                      src={getVimeoEmbedUrl(item.src)}
-                      frameBorder="0"
-                      allow="autoplay; fullscreen; picture-in-picture"
-                      allowFullScreen
-                      title={`video-${index}`}
-                    />
+                    {child.name}
                   </div>
-                )}
-                {item.description && (
-                  <p className="media-description">{item.description}</p>
+                ))}
+              </div>
+              <div className="media-scroll">
+                {mediaToDisplay.map((item, index) => (
+                  <div key={index} className="media-item">
+                    {item.type === "image" ? (
+                      <img src={item.src} alt={`media-${index}`} />
+                    ) : (
+                      <div
+                        className={`video-wrapper ${
+                          item.orientation === "portrait" ? "portrait" : "landscape"
+                        }`}
+                      >
+                        <iframe
+                          src={getVimeoEmbedUrl(item.src)}
+                          frameBorder="0"
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          allowFullScreen
+                          title={`video-${index}`}
+                        />
+                      </div>
+                    )}
+                    {item.description && (
+                      <p className="media-description">{item.description}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : selectedClient.customText && !isMobile ? (
+            /* For desktop with custom text (like @nickcheo), show custom content and media side by side */
+            <div className="client-content">
+              <div className="custom-content">
+                <p className="custom-text">{selectedClient.customText}</p>
+                {selectedClient.email && (
+                  <a href={`mailto:${selectedClient.email}`} className="custom-email">
+                    {selectedClient.email}
+                  </a>
                 )}
               </div>
-            ))}
-          </div>
+              <div className="media-scroll">
+                {mediaToDisplay.map((item, index) => (
+                  <div key={index} className="media-item">
+                    {item.type === "image" ? (
+                      <img src={item.src} alt={`media-${index}`} />
+                    ) : (
+                      <div
+                        className={`video-wrapper ${
+                          item.orientation === "portrait" ? "portrait" : "landscape"
+                        }`}
+                      >
+                        <iframe
+                          src={getVimeoEmbedUrl(item.src)}
+                          frameBorder="0"
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          allowFullScreen
+                          title={`video-${index}`}
+                        />
+                      </div>
+                    )}
+                    {item.description && (
+                      <p className="media-description">{item.description}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : (
+            /* Mobile or no special content: show media scroll directly, with custom content above if present */
+            <>
+              {selectedClient.customText && isMobile && (
+                <div className="custom-content-mobile">
+                  <p className="custom-text">{selectedClient.customText}</p>
+                  {selectedClient.email && (
+                    <a href={`mailto:${selectedClient.email}`} className="custom-email">
+                      {selectedClient.email}
+                    </a>
+                  )}
+                </div>
+              )}
+              <div className="media-scroll">
+                {mediaToDisplay.map((item, index) => (
+                  <div key={index} className="media-item">
+                    {item.type === "image" ? (
+                      <img src={item.src} alt={`media-${index}`} />
+                    ) : (
+                      <div
+                        className={`video-wrapper ${
+                          item.orientation === "portrait" ? "portrait" : "landscape"
+                        }`}
+                      >
+                        <iframe
+                          src={getVimeoEmbedUrl(item.src)}
+                          frameBorder="0"
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          allowFullScreen
+                          title={`video-${index}`}
+                        />
+                      </div>
+                    )}
+                    {item.description && (
+                      <p className="media-description">{item.description}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </div>
 

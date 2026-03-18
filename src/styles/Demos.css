@@ -1,0 +1,98 @@
+.demos-page {
+  background-image: url("../../public/assets/images/paperbackground 2.jpg");
+  font-family: "EB Garamond", serif;
+  color: #3b342c;
+  padding: 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.demos-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.demos-header h1 {
+  font-size: 36px;
+  margin: 0 0 10px 0;
+  color: #3b342c;
+}
+
+.demos-header p {
+  font-size: 18px;
+  margin: 0;
+  color: #5a4e3f;
+}
+
+.demos-list {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.demo-track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #efe9df;
+  border-radius: 8px;
+  box-shadow: 2px 2px #6e665c;
+  transition: background-color 0.2s;
+}
+
+.demo-track:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.track-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.track-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3b342c;
+}
+
+.now-playing {
+  font-size: 14px;
+  color: #4f5b3a;
+  font-style: italic;
+}
+
+.play-button {
+  background: none;
+  border: 2px solid #4f5b3a;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  color: #4f5b3a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.play-button:hover {
+  background-color: #4f5b3a;
+  color: white;
+  transform: scale(1.05);
+}
+
+.play-button:active {
+  transform: scale(0.95);
+}
+
+/* Hide the default audio controls */
+audio {
+  display: none;
+}

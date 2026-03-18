@@ -16,11 +16,6 @@ export default function Contact() {
             target="_blank"
             rel="noreferrer"
           >
-            <img
-              src="/assets/images/oldinstalogo.png"
-              alt="Instagram"
-              className="icon"
-            />
             @ethanshun
           </a>
         </div>
@@ -32,12 +27,6 @@ export default function Contact() {
               <a href="mailto:ethanshunwork@gmail.com">
                 ethanshunwork@gmail.com
               </a>
-            </li>
-            <li>
-              <a href="mailto:ethan@nickcheo.me">ethan@nickcheo.me</a>
-            </li>
-            <li>
-              <a href="mailto:team@theunstable.co">team@theunstable.co</a>
             </li>
           </ul>
         </div>

@@ -1,5 +1,5 @@
 .portfolio-page {
-  background-color: white;
+  background-color: #FAF9F6;
   font-family: "EB Garamond", serif;
   padding: 40px 80px;
   min-height: 100vh;
@@ -22,10 +22,17 @@
 /* Portfolio blurb */
 .portfolio-blurb {
   margin-bottom: 24px;
+  opacity: 1;
+  transition: opacity 2s ease-out;
+}
+
+.portfolio-blurb.fade-out {
+  opacity: 0;
 }
 
 .portfolio-blurb p {
   margin: 0;
+  font-size: 24px;
 }
 
 /* Main layout */
@@ -41,7 +48,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 5px;
 }
 .client-list h2 {
   margin-top: 0;
@@ -53,7 +60,7 @@
 .client-item {
   flex: 1;
   cursor: pointer;
-  text-align: center;
+  text-align: left;
   padding: 8px;
 }
 
@@ -66,12 +73,63 @@
   text-decoration: underline;
 }
 
-/* Client dropdown */
-.client-dropdown {
-  width: auto;
-  max-width: 200px;
-  margin-top: 8px;
-  padding: 8px;
+/* Client content for desktop with children */
+.client-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Children list on the left for desktop */
+.children-list {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 100px; /* Prevent overlap with back button */
+}
+
+.child-item {
+  cursor: pointer;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.child-item:hover {
+  text-decoration: underline;
+}
+
+/* Custom content for special clients like @nickcheo */
+.custom-content {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 100px; /* Prevent overlap with back button */
+}
+
+.custom-content-mobile {
+  margin-bottom: 24px;
+}
+
+.custom-text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.4;
+  color: black;
+  font-family: "EB Garamond", serif;
+}
+
+.custom-email {
+  color: black;
+  text-decoration: underline;
+  font-weight: bold;
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+}
+
+.custom-email:hover {
+  color: #333;
 }
 
 /* Right column (details) */
@@ -97,6 +155,7 @@
   flex-direction: column;
   align-items: center;
   gap: 28px;
+  flex: 1;
 }
 
 /* Media items */
