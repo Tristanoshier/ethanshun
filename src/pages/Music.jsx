@@ -12,7 +12,7 @@ const albums = [
   {
     title: "Demos",
     cover: "/assets/images/demos.png",
-    link: "/demos",
+    link: "https://distrokid.com/hyperfollow/edizzy2/hiding?ref=release",
   },
   {
     title: "Hiding",
