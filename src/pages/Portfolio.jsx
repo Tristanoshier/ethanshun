@@ -112,13 +112,13 @@ const clients = [
           },
           {
             type: "video",
-            src: "https://vimeo.com/1177012465",
+            src: "https://vimeo.com/1177032559",
             orientation: "landscape",
             description: "Lancôme Génifique Valentine's Day",
           },
           {
             type: "video",
-            src: "https://vimeo.com/1177012813",
+            src: "https://vimeo.com/1177032581",
             orientation: "landscape",
             description: "Lancôme Génifique Valentine's Day",
           },
