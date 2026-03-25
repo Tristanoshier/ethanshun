@@ -96,7 +96,7 @@ const clients = [
         ],
       },
       {
-        name: "Lancome",
+        name: "Lancôme",
         media: [
           {
             type: "video",
@@ -152,39 +152,45 @@ const clients = [
           },
           {
             type: "video",
+            src: "https://vimeo.com/1167193474",
+            orientation: "portrait",
+            description: "Marc Jacobs X APC Paris '25",
+          },
+          {
+            type: "video",
+            src: "https://vimeo.com/1167191865",
+            orientation: "portrait",
+            description: "Marc Jacobs X APC Paris '25",
+          },
+          {
+            type: "video",
             src: "https://vimeo.com/1167194515",
             orientation: "portrait",
-            description: "Marc Jacobs Runway '25",
+            description: "Marc Jacobs Holiday Party '25",
           },
           {
             type: "video",
             src: "https://vimeo.com/1167197897",
             orientation: "portrait",
-            description: "Marc Jacobs Runway '25",
+            description: "Marc Jacobs Holiday Dinner '25",
           },
           {
             type: "video",
             src: "https://vimeo.com/1167198005",
             orientation: "portrait",
-            description: "Marc Jacobs Runway '25",
+            description: "Marc Jacobs Holiday Invite '25",
           },
           {
             type: "video",
             src: "https://vimeo.com/1167191953",
             orientation: "portrait",
-            description: "Marc Jacobs Runway '25",
+            description: "Marc Jacobs Holiday '25",
           },
           {
             type: "video",
             src: "https://vimeo.com/1167192919",
             orientation: "portrait",
-            description: "Marc Jacobs Runway '25",
-          },
-          {
-            type: "video",
-            src: "https://vimeo.com/1167193322",
-            orientation: "portrait",
-            description: "Marc Jacobs Runway '25",
+            description: "Marc Jacobs Main Event '25",
           },
           {
             type: "video",
@@ -200,15 +206,9 @@ const clients = [
           },
           {
             type: "video",
-            src: "https://vimeo.com/1167193474",
+            src: "https://vimeo.com/1167193322",
             orientation: "portrait",
-            description: "Marc Jacobs X APC Paris '25",
-          },
-          {
-            type: "video",
-            src: "https://vimeo.com/1167191865",
-            orientation: "portrait",
-            description: "Marc Jacobs X APC Paris '25",
+            description: "Marc Jacobs X Nordstrom NYFW '25",
           },
         ],
       },
@@ -322,6 +322,7 @@ const clients = [
             type: "video",
             src: "https://vimeo.com/1167203410",
             orientation: "portrait",
+            description: "Mia Khalifa for The Face",
           },
           {
             type: "video",
@@ -362,7 +363,7 @@ const clients = [
     ],
   },
   {
-    name: "@nickcheo (manager)",
+    name: "@nickcheo",
     customText:
       "I aid in creative output and help shape music, brand campaigns, live shows, and visual projects.",
     email: "nick@nickcheo.me",
