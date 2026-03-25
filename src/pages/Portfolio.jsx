@@ -13,16 +13,18 @@ const clients = [
             type: "video",
             src: "https://vimeo.com/1167210251",
             orientation: "landscape",
+            description: "AUNU beauty",
           },
         ],
       },
-        {
+      {
         name: "Armani Beauty",
         media: [
           {
             type: "video",
             src: "https://vimeo.com/1174798727",
             orientation: "landscape",
+            description: "Armani Beauty Fragrance Collection",
           },
         ],
       },
@@ -32,7 +34,8 @@ const clients = [
           {
             type: "video",
             src: "https://vimeo.com/1167211087",
-            orientation: "portrait",
+            orientation: "landscape",
+            description: "Celsius Energy House",
           },
         ],
       },
@@ -43,6 +46,7 @@ const clients = [
             type: "video",
             src: "https://vimeo.com/1167209451",
             orientation: "portrait",
+            description: "The Collegiate Collection",
           },
         ],
       },
@@ -53,6 +57,7 @@ const clients = [
             type: "video",
             src: "https://vimeo.com/1167213786",
             orientation: "portrait",
+            description: "Eric Emanuel Kids '25",
           },
         ],
       },
@@ -63,6 +68,7 @@ const clients = [
             type: "video",
             src: "https://vimeo.com/1174212250",
             orientation: "landscape",
+            description: "Hoka NYFW '26",
           },
         ],
       },
@@ -72,47 +78,49 @@ const clients = [
           {
             type: "video",
             src: "https://vimeo.com/1167190616",
-            orientation: "portrait",
+            orientation: "landscape",
+            description: "Friends and Family '25",
           },
           {
             type: "video",
             src: "https://vimeo.com/1167190494",
-            orientation: "portrait",
+            orientation: "landscape",
+            description: "Friends and Family '25",
           },
           {
             type: "video",
             src: "https://vimeo.com/1167190427",
-            orientation: "portrait",
+            orientation: "landscape",
+            description: "Friends and Family '25",
           },
         ],
       },
-       {
+      {
         name: "Lancome",
         media: [
           {
             type: "video",
-            src: "https://vimeo.com/1174801100",
+            src: "https://vimeo.com/1174801166",
             orientation: "landscape",
+            description: "Lancôme Génifique Absolue",
           },
           {
             type: "video",
-            src: "https://vimeo.com/1174801166",
-            orientation: "landscape",
-          },
-           {
-            type: "video",
-            src: "https://vimeo.com/1174800837",
-            orientation: "landscape",
-          },
-           {
-            type: "video",
             src: "https://vimeo.com/1174801024",
             orientation: "landscape",
+            description: "Lancôme Génifique Absolue",
           },
-           {
+          {
             type: "video",
-            src: "https://vimeo.com/1174800946",
+            src: "https://vimeo.com/1177012465",
             orientation: "landscape",
+            description: "Lancôme Génifique Valentine's Day",
+          },
+          {
+            type: "video",
+            src: "https://vimeo.com/1177012813",
+            orientation: "landscape",
+            description: "Lancôme Génifique Valentine's Day",
           },
         ],
       },
@@ -123,11 +131,13 @@ const clients = [
             type: "video",
             src: "https://vimeo.com/1167210643",
             orientation: "landscape",
+            description: "Lexus RZ Commercial 2026",
           },
           {
             type: "video",
             src: "https://vimeo.com/1167214302",
             orientation: "landscape",
+            description: "Lexus RZ Commercial 2026",
           },
         ],
       },
@@ -136,68 +146,80 @@ const clients = [
         media: [
           {
             type: "video",
-            src: "https://vimeo.com/1167191865",
+            src: "https://vimeo.com/1167198944",
             orientation: "portrait",
-          },
-          {
-            type: "video",
-            src: "https://vimeo.com/1167191953",
-            orientation: "portrait",
-          },
-          {
-            type: "video",
-            src: "https://vimeo.com/1167192419",
-            orientation: "portrait",
-          },
-          {
-            type: "video",
-            src: "https://vimeo.com/1167192919",
-            orientation: "portrait",
-          },
-          {
-            type: "video",
-            src: "https://vimeo.com/1167193322",
-            orientation: "portrait",
-          },
-          {
-            type: "video",
-            src: "https://vimeo.com/1167193474",
-            orientation: "portrait",
-          },
-          {
-            type: "video",
-            src: "https://vimeo.com/1167194398",
-            orientation: "portrait",
+            description: "Marc Jacobs Runway '25",
           },
           {
             type: "video",
             src: "https://vimeo.com/1167194515",
             orientation: "portrait",
+            description: "Marc Jacobs Runway '25",
           },
           {
             type: "video",
             src: "https://vimeo.com/1167197897",
             orientation: "portrait",
+            description: "Marc Jacobs Runway '25",
           },
           {
             type: "video",
             src: "https://vimeo.com/1167198005",
             orientation: "portrait",
+            description: "Marc Jacobs Runway '25",
           },
           {
             type: "video",
-            src: "https://vimeo.com/1167198944",
+            src: "https://vimeo.com/1167191953",
             orientation: "portrait",
+            description: "Marc Jacobs Runway '25",
+          },
+          {
+            type: "video",
+            src: "https://vimeo.com/1167192919",
+            orientation: "portrait",
+            description: "Marc Jacobs Runway '25",
+          },
+          {
+            type: "video",
+            src: "https://vimeo.com/1167193322",
+            orientation: "portrait",
+            description: "Marc Jacobs Runway '25",
+          },
+          {
+            type: "video",
+            src: "https://vimeo.com/1167192419",
+            orientation: "portrait",
+            description: "Marc Jacobs X Happier Grocer '25",
+          },
+          {
+            type: "video",
+            src: "https://vimeo.com/1167194398",
+            orientation: "portrait",
+            description: "Marc Jacobs X Happier Grocer '25",
+          },
+          {
+            type: "video",
+            src: "https://vimeo.com/1167193474",
+            orientation: "portrait",
+            description: "Marc Jacobs X APC Paris '25",
+          },
+          {
+            type: "video",
+            src: "https://vimeo.com/1167191865",
+            orientation: "portrait",
+            description: "Marc Jacobs X APC Paris '25",
           },
         ],
       },
-       {
+      {
         name: "MIU MIU",
         media: [
           {
             type: "video",
             src: "https://vimeo.com/1174798849",
             orientation: "landscape",
+            description: "Tales and Tellers '25",
           },
         ],
       },
@@ -208,6 +230,7 @@ const clients = [
             type: "video",
             src: "https://vimeo.com/1167213996",
             orientation: "portrait",
+            description: "Miracle Drops '26",
           },
         ],
       },
@@ -216,33 +239,39 @@ const clients = [
         media: [
           {
             type: "video",
+            src: "https://vimeo.com/1174209448",
+            orientation: "portrait",
+            description: "ON Tennis Truck Day '25",
+          },
+          {
+            type: "video",
             src: "https://vimeo.com/1174201888",
             orientation: "portrait",
+            description: "ON Tennis X Ben Shelton",
           },
           {
             type: "video",
             src: "https://vimeo.com/1174201997",
-            orientation: "portrait",
+            orientation: "landscape",
+            description: "ON Tennis X Ben Shelton",
           },
           {
             type: "video",
             src: "https://vimeo.com/1174201631",
             orientation: "portrait",
+            description: "ON Tennis X Ben Shelton",
           },
           {
             type: "video",
             src: "https://vimeo.com/1174203294",
-            orientation: "portrait",
-          },
-          {
-            type: "video",
-            src: "https://vimeo.com/1174209448",
-            orientation: "portrait",
+            orientation: "landscape",
+            description: "ON Tennis X Ben Shelton",
           },
           {
             type: "video",
             src: "https://vimeo.com/1174209678",
-            orientation: "portrait",
+            orientation: "landscape",
+            description: "ON Tennis X Ben Shelton",
           },
         ],
       },
@@ -253,16 +282,19 @@ const clients = [
             type: "video",
             src: "https://vimeo.com/1167200498",
             orientation: "landscape",
+            description: "Paloma Elsesser for Purple Mag",
           },
           {
             type: "video",
             src: "https://vimeo.com/1167200684",
             orientation: "landscape",
+            description: "Paloma Elsesser for Purple Mag",
           },
           {
             type: "video",
             src: "https://vimeo.com/1167200839",
             orientation: "landscape",
+            description: "Paloma Elsesser for Purple Mag",
           },
         ],
       },
@@ -272,7 +304,8 @@ const clients = [
           {
             type: "video",
             src: "https://vimeo.com/1167214526",
-            orientation: "portrait",
+            orientation: "landscape",
+            description: "Tatcha Holiday Advent Calendar '25",
           },
         ],
       },
@@ -283,6 +316,7 @@ const clients = [
             type: "video",
             src: "https://vimeo.com/1167202384",
             orientation: "portrait",
+            description: "A$AP Rocky AWGE Paris Fashion Show '25",
           },
           {
             type: "video",
@@ -293,21 +327,24 @@ const clients = [
             type: "video",
             src: "https://vimeo.com/1167203820",
             orientation: "portrait",
+            description: "Willy Chavarria AW'26 Men's show in Paris",
           },
-            {
+          {
             type: "video",
             src: "https://vimeo.com/1174800289",
             orientation: "landscape",
+            description: "True Whitaker Interview",
           },
         ],
       },
       {
-        name: "Thome Browne",
+        name: "Thom Browne",
         media: [
           {
             type: "video",
             src: "https://vimeo.com/1174211924",
             orientation: "portrait",
+            description: "Thom Browne S/S '26",
           },
         ],
       },
@@ -318,6 +355,7 @@ const clients = [
             type: "video",
             src: "https://vimeo.com/1167214817",
             orientation: "landscape",
+            description: "75 Year Anniversary",
           },
         ],
       },
@@ -325,7 +363,8 @@ const clients = [
   },
   {
     name: "@nickcheo (manager)",
-    customText: "I oversee creative output and help shape music, brand campaigns, live shows, and visual projects.",
+    customText:
+      "I aid in creative output and help shape music, brand campaigns, live shows, and visual projects.",
     email: "nick@nickcheo.me",
     media: [
       {
@@ -336,7 +375,7 @@ const clients = [
       {
         type: "video",
         src: "https://vimeo.com/1167180224",
-        orientation: "portrait",
+        orientation: "landscape",
         description:
           "Nick on tour with Pinkpantheress for 13 US show dates - Fall 25",
       },
@@ -356,7 +395,7 @@ const clients = [
       {
         type: "video",
         src: "https://vimeo.com/1167180231",
-        orientation: "portrait",
+        orientation: "landscape",
         description: "Stage design/creative with Luca Pantel",
       },
       {
@@ -416,8 +455,8 @@ export default function Portfolio() {
       setIsMobile(window.innerWidth <= 768);
     };
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   // Hide blurb after 10 seconds with fade animation
@@ -471,11 +510,11 @@ export default function Portfolio() {
   return (
     <div className="portfolio-page">
       {showBlurb && (
-        <div className={`portfolio-blurb ${blurbFading ? 'fade-out' : ''}`}>
+        <div className={`portfolio-blurb ${blurbFading ? "fade-out" : ""}`}>
           <p>
-            Welcome to my portfolio. I'm a multidisciplinary creative who operates
-            across management, music production, sound design, and creative
-            direction.
+            Welcome to my portfolio. I'm a multidisciplinary creative who
+            operates across management, music production, sound design, and
+            creative direction.
           </p>
         </div>
       )}
@@ -564,7 +603,9 @@ export default function Portfolio() {
                     ) : (
                       <div
                         className={`video-wrapper ${
-                          item.orientation === "portrait" ? "portrait" : "landscape"
+                          item.orientation === "portrait"
+                            ? "portrait"
+                            : "landscape"
                         }`}
                       >
                         <iframe
@@ -589,7 +630,10 @@ export default function Portfolio() {
               <div className="custom-content">
                 <p className="custom-text">{selectedClient.customText}</p>
                 {selectedClient.email && (
-                  <a href={`mailto:${selectedClient.email}`} className="custom-email">
+                  <a
+                    href={`mailto:${selectedClient.email}`}
+                    className="custom-email"
+                  >
                     {selectedClient.email}
                   </a>
                 )}
@@ -602,7 +646,9 @@ export default function Portfolio() {
                     ) : (
                       <div
                         className={`video-wrapper ${
-                          item.orientation === "portrait" ? "portrait" : "landscape"
+                          item.orientation === "portrait"
+                            ? "portrait"
+                            : "landscape"
                         }`}
                       >
                         <iframe
@@ -628,7 +674,10 @@ export default function Portfolio() {
                 <div className="custom-content-mobile">
                   <p className="custom-text">{selectedClient.customText}</p>
                   {selectedClient.email && (
-                    <a href={`mailto:${selectedClient.email}`} className="custom-email">
+                    <a
+                      href={`mailto:${selectedClient.email}`}
+                      className="custom-email"
+                    >
                       {selectedClient.email}
                     </a>
                   )}
@@ -642,7 +691,9 @@ export default function Portfolio() {
                     ) : (
                       <div
                         className={`video-wrapper ${
-                          item.orientation === "portrait" ? "portrait" : "landscape"
+                          item.orientation === "portrait"
+                            ? "portrait"
+                            : "landscape"
                         }`}
                       >
                         <iframe
